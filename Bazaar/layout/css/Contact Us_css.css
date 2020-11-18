@@ -1,0 +1,58 @@
+/* start thanks */
+
+.thanks h1,
+.thanks h2 {
+  line-height: 1.5;
+  text-transform: capitalize;
+  color: #162f5e;
+  margin: 30px 0px;
+}
+
+/* end thanks*/
+
+/* start contact us */
+
+/* phones */
+@media (max-width: 800px) {
+  .contact {
+    width: 90%;
+    margin: 20px 7%;
+  }
+  .contact input,
+  .contact textarea{
+      width: 100% !important;
+  }
+}
+
+/* computers */
+@media (min-width: 801px) {
+  .contact {
+    width: 70%;
+    margin: 20px 25%;
+  }
+  .contact input,
+  .contact textarea{
+      width: 70% !important;
+  }
+}
+
+.contact label,
+.contact input {
+  display: block;
+  margin: 30px 0;
+  font-size: 20px;
+}
+
+.contact input,
+.contact textarea {
+  background-color: white;
+  outline: none;
+  border: 2px solid #162f5e;
+  padding: 7px 3px;
+  color: #162f5e;
+  width: 50%;
+}
+
+/* end contact us */
+
+

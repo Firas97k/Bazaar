@@ -1,0 +1,216 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : ٠١‏/١١‏/٢٠٢٠, ٦:٣٧:٣٢ م
+    Author     : hsn99
+*/
+
+/* start abs */
+
+
+.box {
+  background-color: white;
+  border-radius: 0px 0 20px 20px;
+  border: 2px solid #162f5e;
+}
+
+/* phones */
+@media (max-width: 800px) {
+  .box {
+    width: 90%;
+    margin: 30px 5%;
+    height: 600px;
+    border-radius: 20px;
+  }
+}
+
+/* computer */
+@media (min-width: 801px) {
+  .box {
+    width: 72%;
+    margin: 30px 5% 30px 3%;
+    height: 400px;
+    border-radius: 0px 0 20px 20px;
+  }
+}
+
+.box .info {
+  background-color: #1f75dd;
+  padding: 10px;
+  position: relative;
+}
+
+/* phones */
+@media (max-width: 800px) {
+  .box .info {
+    width: 100%;
+    height: 50%;
+    border-radius: 16px 16px 0 0;
+  }
+}
+
+/* computer */
+@media (min-width: 801px) {
+  .box .info {
+    width: 30%;
+    height: 100%;
+    border-right: 5px solid #162f5e;
+    border-radius: 0px 0 0 16px;
+  }
+}
+
+.box .info p, .box .info h3{
+    white-space: nowrap; 
+    margin-top: 10px;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    width: 100%;
+}
+
+.box .info p::selection, 
+.box .info h3::selection{
+    background-color: #ffffff;
+    color: black
+}
+
+.box .info input {
+  width: 80%;
+  padding: 5px 0px;
+  color: white;
+  border-radius: 10px;
+  background: #162f5e;
+  outline: none;
+  border: 1px solid #1f75dd;
+  font-size: 18px;
+  display: block;
+  position: absolute;
+  bottom: 1px;
+}
+
+/* phones */
+@media (max-width: 800px) {
+  .box .info input {
+    margin: 0 8%;
+  }
+}
+
+/* computer */
+@media (min-width: 801px) {
+  .box .info input {
+    margin: 0px 10% 0 5%;
+  }
+}
+
+.box .info input:hover {
+  color: #162f5e;
+  background: white;
+  border: 1px solid #162f5e;
+}
+
+.box .images {
+  position: relative;
+}
+
+/* phones */
+@media (max-width: 800px) {
+  .box .images {
+    width: 100%;
+    height: 42%;
+  }
+}
+
+/* computer */
+@media (min-width: 801px) {
+  .box .images {
+    width: 70%;
+    height: 87%;
+  }
+}
+
+.box .images img {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+/* phones */
+@media (max-width: 800px) {
+  .box .images img {
+    border-radius: 0;
+  }
+}
+
+/* computer */
+@media (min-width: 801px) {
+  .box .images img {
+  }
+}
+
+.box .control {
+  border-top: 1px solid #162f5e;
+  padding: 10px 20px;
+}
+
+/* phones */
+@media (max-width: 800px) {
+  .box .control {
+    width: 100%;
+    height: 8%;
+  }
+}
+
+/* computer */
+@media (min-width: 801px) {
+  .box .control {
+    width: 70%;
+    height: 13%;
+  }
+}
+.box .control .previous,
+.box .control .next {
+  background-color: #162f5e;
+  color: white;
+  width: 20%;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  padding: 5px;
+}
+
+.box .control .dots {
+  width: 60%;
+  float: left;
+}
+.box .control .dots ul {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+  user-select: none;
+}
+.box .control .dots ul li {
+  display: inline-block;
+  background-color: #eee;
+  color: black;
+  font-weight: bold;
+  width: 28px;
+  height: 23px;
+  border-radius: 4px;
+  margin: 4px 2px;
+}
+
+/* end abs */
+

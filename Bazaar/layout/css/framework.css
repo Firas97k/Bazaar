@@ -1,0 +1,112 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : ٢٨‏/١٠‏/٢٠٢٠, ٤:٣٢:٤٥ م
+    Author     : hsn99
+*/
+
+/* start Globle */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+html{
+
+}
+body {
+  background-color: #cccccc;
+  overflow-x: hidden
+}
+
+/* ens Globle*/
+
+/* framework ----------------------------------------------------------------*/
+
+.disable {
+  cursor: no-drop !important;
+  background-color: #162f5e75 !important;
+}
+
+.activeImg {
+  opacity: 1 !important;
+}
+
+.activeUl {
+  background-color: #1f75dd !important;
+  color: white !important;
+}
+
+.container {
+  margin: 0px auto !important;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.float_left {
+  float: left;
+}
+
+.float_right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.shadow {
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.bold {
+  font-weight: bolder !important;
+}
+
+.accept, .notAccept, .warning{
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.accept{
+    background-color: #d4edda;
+    color: #155724;
+}
+.notAccept{
+    background-color: #f8d7da;
+    color: #721c24;
+}
+.warning{
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.capitalize{
+    text-transform: capitalize;
+}
+/* phones */
+@media (max-width: 800px) {
+  .hidden_in_phone {
+    display: none;
+  }
+  .show_in_phone {
+    display: block;
+  }
+}
+
+/* computers */
+@media (min-width: 801px) {
+  .hidden_in_computer {
+    display: none;
+  }
+
+  .show_in_computer {
+    display: block;
+  }
+}

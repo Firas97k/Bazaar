@@ -1,0 +1,454 @@
+
+var allImages = Array.from(document.querySelectorAll('.box .images img'));
+
+var allArrayOfDots = Array.from(document.querySelectorAll('.box .control #dots #ul_dots li'));
+
+var allNextButton = Array.from(document.querySelectorAll('#next'));
+
+var allPreviousButton = Array.from(document.querySelectorAll('#previous'));
+
+action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>
+
+.z{
+    background-color: #8495b5a1;
+    width: 78%;
+    height: 70%;
+    margin: 30px 0% 30px 0%;
+}
+.z:nth-child(even) {
+    background-color: #162f5ea1;
+}
+
+var x =document.createElement("div");
+x.textContent = 'jhgfdfuikjcghjikjb';
+window.document.body.insertBefore(x, document.body.children[1])
+// create objects from imgContainer class
+
+// object 1
+var object1 = new imgContainer(allImages.slice(0,5), allArrayOfDots.slice(0,5), allNextButton[0], allPreviousButton[0]);
+// next buuton
+object1.nextButton.addEventListener('click', function(){
+    object1.nextSlide();
+});
+// previous button
+object1.previousButton.addEventListener('click', function(){
+    object1.previousSlide();
+});
+object1.theChecker();
+
+
+// object 2
+var object2 = new imgContainer(allImages.slice(5,10), allArrayOfDots.slice(5,10), allNextButton[1], allPreviousButton[1]);
+// next buuton
+object2.nextButton.addEventListener('click', function(){
+    object2.nextSlide();
+});
+// previous button
+object2.previousButton.addEventListener('click', function(){
+    object2.previousSlide();
+});
+object2.theChecker();
+
+
+// object 3
+var object3 = new imgContainer(allImages.slice(10,15), allArrayOfDots.slice(10,15), allNextButton[2], allPreviousButton[2]);
+// next buuton
+object3.nextButton.addEventListener('click', function(){
+    object3.nextSlide();
+});
+// previous button
+object3.previousButton.addEventListener('click', function(){
+    object3.previousSlide();
+});
+object3.theChecker();
+
+
+// object 4
+var object4 = new imgContainer(allImages.slice(15,20), allArrayOfDots.slice(15,20), allNextButton[3], allPreviousButton[3]);
+// next buuton
+object4.nextButton.addEventListener('click', function(){
+    object4.nextSlide();
+});
+// previous button
+object4.previousButton.addEventListener('click', function(){
+    object4.previousSlide();
+});
+object4.theChecker();
+
+
+// object 5
+var object5 = new imgContainer(allImages.slice(20,25), allArrayOfDots.slice(20,25), allNextButton[4], allPreviousButton[4]);
+// next buuton
+object5.nextButton.addEventListener('click', function(){
+    object5.nextSlide();
+});
+// previous button
+object5.previousButton.addEventListener('click', function(){
+    object5.previousSlide();
+});
+object5.theChecker();
+
+
+
+----------------------------------------------------------------
+html 
+
+
+    <div class="box float_left shadow">
+        <div class="info float_left">
+
+            <h3>ab name</h3>
+
+            <p>info 1</p>
+            <p>info 2</p>
+            <p>info 3</p>
+
+            <p>date</p>
+            <input type="submit" value="More Details" />
+        </div>
+
+        <div class="images float_right">
+
+            <img src="../layout/images/fisrt_car.jpg"/>
+            <img src="../layout/images/second_car.jpg"/>
+            <img src="../layout/images/third_car.jpg"/>
+            <img src="../layout/images/fourth_car.jpg"/>
+            <img src="../layout/images/fifth_car.jpg"/>
+
+        </div>
+        <div class="control float_right ">
+            <span id="previous" class="previous float_left text_center">Previous</span>
+            <span id="dots" class="dots">
+                <ul id="ul_dots">
+                    <li data-index="1">1</li>
+                    <li data-index="2">2</li>
+                    <li data-index="3">3</li>
+                    <li data-index="4">4</li>
+                    <li data-index="5">5</li>
+                </ul>
+            </span>
+            <span id="next" class="next float_right text_center">Next</span>
+        </div>
+
+    </div>
+
+
+
+
+var body = window.document.body;
+
+// main div (box)
+var mainDiv = document.createElement('div');
+mainDiv.classList.add('box', 'float_left', 'shadow');
+
+
+// information div
+var infoDiv = document.createElement('div');
+infoDiv.classList.add('info', 'float_left');
+mainDiv.appendChild(infoDiv);
+
+// images div
+var imgDiv = document.createElement('div');
+imgDiv.classList.add('images', 'float_right');
+
+// images
+var imageArray = new Array(5);
+for(var i = 0; i<imageArray.length; i++){
+    imageArray[i] = document.createElement('img');
+}
+imageArray[0].src = '../layout/images/fisrt_car.jpg';
+imageArray[1].src = '../layout/images/second_car.jpg';
+imageArray[2].src = '../layout/images/third_car.jpg';
+imageArray[3].src = '../layout/images/fourth_car.jpg';
+imageArray[4].src = '../layout/images/fifth_car.jpg';
+
+for(var i = 0; i<imageArray.length; i++){
+    imgDiv.appendChild(imageArray[i]);
+}
+
+// control div
+var controlDiv = document.createElement('div');
+controlDiv.classList.add('control', 'float_right');
+
+// previous button
+var previousSpan = document.createElement('span');
+previousSpan.classList.add('previous', 'float_left', 'text_center');
+previousSpan.id = 'previous';
+previousSpan.textContent = 'Pevious';
+
+// dots
+var dotsSpan = document.createElement('span');
+dotsSpan.classList.add('dots');
+dotsSpan.id = 'dots';
+var ul = document.createElement('ul');
+ul.id = 'ul_dots';
+var liArray = new Array(5);
+for(var i = 0; i<liArray.length; i++){
+    liArray[i] = document.createElement('li');
+    liArray[i].id = i+1;
+    liArray[i].textContent = i+1;
+}
+for(var i = 0; i<liArray.length; i++){
+    ul.appendChild(liArray[i]);
+}
+dotsSpan.appendChild(ul);
+
+// next button
+var nextSpan = document.createElement('span');
+nextSpan.classList.add('next', 'float_right', 'text_center');
+nextSpan.id = 'next';
+nextSpan.textContent = 'Next';
+
+controlDiv.appendChild(previousSpan);
+controlDiv.appendChild(dotsSpan);
+controlDiv.appendChild(nextSpan);
+
+mainDiv.appendChild(infoDiv);
+mainDiv.appendChild(imgDiv);
+mainDiv.appendChild(controlDiv);
+body.insertBefore(mainDiv, body.children[2]);
+
+
+
+
+------------------------------------------------------------------------------
+
+database 
+    $x = new Database('localhost', 'root', '', 'test');
+    $pdo = $x->startConnact();
+    $x->setDeafultFetchAsObject($pdo);
+    
+    
+    $statement = "SELECT * FROM `id`";
+
+    
+    
+    $ids = $x->exe($statement, $pdo);
+    foreach ($ids as $i){
+        echo $i->ID.'---';
+    }
+    
+    $x->finishConnact();
+
+
+--------------------------------------------------------------------------------
+register-pdo-format
+
+<?php
+// Include config file
+require_once "config.php";
+ 
+// Define variables and initialize with empty values
+$username = $password = $confirm_password = "";
+$username_err = $password_err = $confirm_password_err = "";
+ 
+// Processing form data when form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+ 
+    // Validate username
+    if(empty(trim($_POST["username"]))){
+        $username_err = "Please enter a username.";
+    } else{
+        // Prepare a select statement
+        $sql = "SELECT id FROM users WHERE username = :username";
+        
+        if($stmt = $pdo->prepare($sql)){
+            // Bind variables to the prepared statement as parameters
+            $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
+            
+            // Set parameters
+            $param_username = trim($_POST["username"]);
+            
+            // Attempt to execute the prepared statement
+            if($stmt->execute()){
+                if($stmt->rowCount() == 1){
+                    $username_err = "This username is already taken.";
+                } else{
+                    $username = trim($_POST["username"]);
+                }
+            } else{
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            unset($stmt);
+        }
+    }
+    
+    // Validate password
+    if(empty(trim($_POST["password"]))){
+        $password_err = "Please enter a password.";     
+    } elseif(strlen(trim($_POST["password"])) < 6){
+        $password_err = "Password must have atleast 6 characters.";
+    } else{
+        $password = trim($_POST["password"]);
+    }
+    
+    // Validate confirm password
+    if(empty(trim($_POST["confirm_password"]))){
+        $confirm_password_err = "Please confirm password.";     
+    } else{
+        $confirm_password = trim($_POST["confirm_password"]);
+        if(empty($password_err) && ($password != $confirm_password)){
+            $confirm_password_err = "Password did not match.";
+        }
+    }
+    
+    // Check input errors before inserting in database
+    if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
+        
+        // Prepare an insert statement
+        $sql = "INSERT INTO users (username, password) VALUES (:username, :password)";
+         
+        if($stmt = $pdo->prepare($sql)){
+            // Bind variables to the prepared statement as parameters
+            $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
+            $stmt->bindParam(":password", $param_password, PDO::PARAM_STR);
+            
+            // Set parameters
+            $param_username = $username;
+            $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+            
+            // Attempt to execute the prepared statement
+            if($stmt->execute()){
+                // Redirect to login page
+                header("location: login.php");
+            } else{
+                echo "Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            unset($stmt);
+        }
+    }
+    
+    // Close connection
+    unset($pdo);
+}
+?>
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    <style type="text/css">
+        body{ font: 14px sans-serif; }
+        .wrapper{ width: 350px; padding: 20px; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Sign Up</h2>
+        <p>Please fill this form to create an account.</p>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
+                <span class="help-block"><?php echo $username_err; ?></span>
+            </div>    
+            <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                <label>Password</label>
+                <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
+                <span class="help-block"><?php echo $password_err; ?></span>
+            </div>
+            <div class="form-group <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
+                <span class="help-block"><?php echo $confirm_password_err; ?></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Submit">
+                <input type="reset" class="btn btn-default" value="Reset">
+            </div>
+            <p>Already have an account? <a href="login.php">Login here</a>.</p>
+        </form>
+    </div>    
+</body>
+</html>
+
+
+
+----------------------------------------------------------------------------
+
+
+
+// validation  sign up ---------------------------------------------------------
+var
+    hint = document.getElementById('hint'),
+    signup = document.getElementById('signupButton'),
+    
+    usernameSign = document.getElementById('usernameSign'),
+    passwordSign = document.getElementById('passwordSign'),
+    emailSign = document.getElementById('emailSign');
+    
+signup.classList.add('disable');
+signup.disabled = true;
+hint.style.display = 'none';
+
+var result = emailSign.value.search(/@./g);
+emailSign.onkeyup = function (){
+     result = emailSign.value.search(/@./g);
+
+if(result === -1){
+    hint.style.display = 'block';
+    emailSign.style.borderBottom = '2px solid red';
+    signup.classList.add('disable');
+        allNotEmpty_Sign();
+}else if(result > -1){
+    hint.style.display = 'none';
+    emailSign.style.borderBottom = '2px solid #00308a';
+        allNotEmpty_Sign();
+    }
+};
+
+function allNotEmpty_Sign(){
+    if((usernameSign.value !== "") && (passwordSign.value !== "") && (result > -1)){
+        signup.classList.remove('disable');
+        signup.disabled = false;
+    } else{
+        signup.classList.add('disable');
+        signup.disabled = true;
+    }
+}
+
+usernameSign.onkeyup = allNotEmpty_Sign;
+passwordSign.onkeyup = allNotEmpty_Sign;
+
+//------------------------------------------------------------------------------
+
+// validation for log in--------------------------------------------------------
+
+var usernameLog = document.getElementById('usernameLog');
+var passwordLog = document.getElementById('passwordLog');
+
+var login = document.getElementById('loginButton');
+
+login.classList.add('disable');
+login.disabled = true;
+
+function allNotEmpty_Log(){
+    if((usernameLog.value !== "") && (passwordLog.value !== "")){
+        login.classList.remove('disable');
+        login.disabled = false;
+    } else{
+        login.classList.add('disable');
+        login.disabled = true;
+    }
+}
+
+usernameLog.onkeyup = allNotEmpty_Log;
+passwordLog.onkeyup = allNotEmpty_Log;
+
+
+    <script>
+    if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+    </script>
+ 
+
+    <form method="post">
+        <input type="submit" name="previousHome" value="Previous" id="previousHome" class="previousHome float_left text_center"/>
+    </form>

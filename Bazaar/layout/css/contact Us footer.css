@@ -1,0 +1,40 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : ٢٩‏/١٠‏/٢٠٢٠, ٨:٥٧:٤٣ ص
+    Author     : hsn99
+*/
+
+/* start contact us */
+
+.contact {
+/*  position: absolute;
+  bottom: 30px;*/
+  background-color: #191e22;
+  width: 100%;
+  color: white;
+  margin-top: 30px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+
+.contact label,
+.contact input {
+  display: block;
+  margin: 10px 0;
+}
+
+.contact input,
+.contact textarea {
+  background-color: #636e72;
+  outline: none;
+  border: none;
+  width: 300px;
+  padding: 2px 0px;
+  color: white;
+}
+
+/* end contact us*/

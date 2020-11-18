@@ -1,0 +1,133 @@
+
+/* start classes */
+
+.classes {
+  color: white;
+  background-color: #1f75dd;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.classes li {
+  letter-spacing: 2px;
+}
+
+/* phones */
+@media (max-width: 800px) {
+  .classes {
+    position: absolute;
+    z-index: 998;
+    right: 0px;
+    top: 281px;
+    background-color: #1f75dd;
+    width: 50%;
+    height: 1250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    visibility: hidden;
+    padding-top: 30px;
+  }
+}
+
+/* computers */
+@media (min-width: 801px) {
+  .classes {
+    margin-top: 30px;
+    border-radius: 20px 20px 0 0;
+    width: 20%;
+  }
+}
+
+.classes > h2 {
+  background-color: #162f5e;
+  padding: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+/* phones */
+@media (max-width: 800px) {
+  .classes > h2 {
+  }
+}
+
+/* computers */
+@media (min-width: 801px) {
+  .classes > h2 {
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+.classes section {
+  margin-bottom: 30px;
+  background-color: #162f5e75;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.classes section h2 {
+  background-color: #162f5ea1;
+  padding: 10px;
+}
+
+.classes section ul li {
+  margin-top: 10px;
+}
+/* end classes */
+
+/* start next and previous buttons*/
+.control_pages{
+    height: 100px;
+    display: flex;
+    padding: 2%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.control_pages span{
+    display: block;
+    line-height: 40px;
+    height: 40px;
+    width: 100px;
+    color: #162f5e;
+    background: white;
+    border: 1px solid #162f5e;
+    border-radius: 20px
+}
+/* phones */
+@media (max-width: 800px) {
+    .control_pages{
+        width: 100%;
+    }
+
+}
+
+/* computers */
+@media (min-width: 801px) {
+    .control_pages{
+        width: 80%;
+    }
+
+}
+
+.nextPage, .previousPage{
+    background-color: #1f75dd;
+    color: white;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    border: 1px solid #162f5e;
+    text-decoration: none;
+    display: block;
+}
+
+.nextPage:hover, .previousPage:hover {
+  color: #162f5e;
+  background: white;
+  border: 1px solid #162f5e;
+}
+/* end next and previous buttons*/

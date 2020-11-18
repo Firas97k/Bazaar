@@ -1,0 +1,220 @@
+
+/*start logo*/
+
+.logo {
+  color: white;
+  width: 100%;
+  background-color: #162f5e;
+  border-radius: 0 0 25px 25px;
+  padding: 10px;
+  margin-bottom: 50px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.logo h1 {
+  margin: 0px;
+}
+/*end logo*/
+
+/* start box */
+
+.box {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  height: 70%;
+  margin: auto;
+  margin-bottom: 100px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+
+/* phones */
+@media (max-width: 800px) {
+    .box{
+        height: 700px;
+    }
+}
+
+/* computers */
+@media (min-width: 801px) {
+    .box{
+        height: 500px
+    }
+}
+
+/* end box */
+
+/* start left div */
+
+.left {
+  position: relative;
+}
+
+.left .choose {
+  width: 100%;
+  background-color: #162f5e;
+  padding: 10px;
+  border-radius: 20px;
+  border: 3px solid white;
+}
+
+.left .choose .login,
+.left .choose .signup {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  display: block;
+  padding: 5px;
+}
+
+.left .choose .login:hover,
+.left .choose .signup:hover {
+  border-bottom: 2px solid white;
+}
+
+.activeChoose {
+  background-color: #1d74de;
+  border-bottom: 2px solid white;
+  border-radius: 10px;
+}
+
+.loging_form,
+.signup_form {
+  margin: 30px 50px;
+  width: 100%;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.7s;
+  display: block;
+}
+
+.activeForm {
+  opacity: 1;
+  visibility: visible;
+}
+
+.loging_form label,
+.signup_form label,
+.forgot {
+  color: #00308a;
+  text-align: left;
+  font-size: 20px;
+  display: block;
+}
+
+.forgot {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.forgot:hover {
+  color: #00205a;
+  border-bottom: 1px solid #00205a;
+}
+
+.loging_form input,
+.signup_form input {
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  color: black;
+  border-bottom: 2px solid #00308a;
+  padding-bottom: 7px;
+  padding-top: 5px;
+  margin-bottom: 30px;
+}
+
+.loging_form input:last-of-type,
+.signup_form input:last-of-type {
+  padding: 10px 70px;
+  color: white;
+  border-radius: 10px;
+  background: #1d73dd;
+  outline: none;
+  border: 1px solid #162f5e;
+  font-size: 20px;
+  margin-top: 15px;
+  display: block;
+}
+
+.loging_form input:last-of-type:hover,
+.signup_form input:last-of-type:hover {
+  background: #162f5e;
+  border: 1px solid #1d74de;
+}
+
+/* phones */
+@media (max-width: 800px) {
+  .left {
+    width: 100%;
+    height: 70%;
+  }
+}
+
+/* computers */
+@media (min-width: 801px) {
+  .left {
+    width: 50%;
+    height: 100%;
+    float: left;
+  }
+}
+
+/* end left div */
+
+/* start right div */
+
+.right {
+  background-color: #1f75dd;
+  padding-top: 50px;
+}
+
+.right h2 {
+  color: white;
+}
+
+.right a {
+  padding: 10px;
+  color: white;
+  background: #162f5e;
+  border: 1px solid white;
+  border-radius: 10px;
+  outline: none;
+  font-size: 20px;
+  display: block;
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+.right a:hover {
+  color: #162f5e;
+  background: white;
+  border: 1px solid #162f5e;
+}
+
+/* phones */
+@media (max-width: 800px) {
+  .right {
+    width: 100%;
+    height: 30%;
+    padding-top: 15px;
+  }
+}
+
+/* computers */
+@media (min-width: 801px) {
+  .right {
+    width: 50%;
+    height: 100%;
+    float: right;
+  }
+}
+/* end right div */

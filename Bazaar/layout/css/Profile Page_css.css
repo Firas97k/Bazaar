@@ -1,0 +1,154 @@
+
+/* start add advertising */
+.add {
+  height: 200px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* phones */
+@media (max-width: 800px) {
+  .add {
+    width: 90%;
+    margin: 5%;
+  }
+}
+
+/* computer */
+@media (min-width: 801px) {
+  .add {
+    width: 58%;
+    margin: 3%;
+  }
+}
+
+.add div {
+  width: 100%;
+  height: 100%;
+  border: 2px dashed #162f5e;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  transform: scale(1, 1);
+  transition: scale 1s ease-in-out;
+}
+
+.add:hover {
+  background-color: white;
+  transform: scale(1.05, 1.05);
+}
+
+.add div div {
+  border: none;
+  position: absolute;
+  width: 220px;
+  height: 132px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: auto;
+  text-transform: capitalize;
+  font-size: 25px;
+  color: #1f75dd;
+}
+
+.add div .plus {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+}
+
+.add div .lineV,
+.add div .lineH {
+  background-color: #162f5e;
+  width: 50px;
+  height: 7px;
+  border-radius: 10px;
+}
+
+.add div .lineH {
+  transform: rotate(90deg);
+}
+
+/* end add advertising */
+
+/* start personal information */
+
+.person_info {
+}
+
+/* phones */
+@media (max-width: 800px) {
+  .person_info {
+    width: 90%;
+    margin: 5%;
+    height: 300px;
+    float: left;
+  }
+}
+
+/* computer */
+@media (min-width: 801px) {
+  .person_info {
+    width: 32%;
+    height: 600px;
+    margin-right: 2%;
+    margin-top: 2%;
+  }
+}
+
+.person_info h2 {
+  text-transform: capitalize;
+  border-bottom: 5px double #162f5e;
+  color: #1f75dd;
+}
+
+.person_info .person_img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-color: #162f5e;
+  margin: 10px auto;
+}
+
+.person_info .person_attribute {
+  width: 100%;
+  background-color: #162f5e;
+  height: 200px;
+}
+/* end personal information */
+
+/* start My ads*/
+
+/* phones */
+@media (max-width: 800px) {
+  .my_ads, .box {
+    width: 90%;
+    margin: 15px 5%;
+  }
+  .my_ads{
+      margin-top: 40px
+  }
+
+}
+
+/* computer */
+@media (min-width: 801px) {
+  .my_ads, .box{
+    width: 58%;
+    margin-left: 3%;
+  }
+}
+
+.my_ads h2 {
+  text-transform: capitalize;
+
+  border-bottom: 5px double #162f5e;
+  color: #1f75dd;
+}
+/* end My ads*/
+
+
